@@ -10,5 +10,8 @@ COPY main.py .
 # Install dependencies
 RUN pip install requests beautifulsoup4
 
-# Set the command to run the script
-CMD ["python", "main.py"]
+# Add crontab file
+ADD crontab /etc/crontabs/root
+
+# Run cron in the foreground
+CMD ["crond", "-f"]
