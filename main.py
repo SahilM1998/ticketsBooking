@@ -17,7 +17,7 @@ def check_ticket_availability():
 
 if __name__ == "__main__":
     availability = check_ticket_availability()
-    if "Tickets Available" in availability:
+    if "Chennai Super Kings" in availability:
         print("Tickets are available!")
         # You could send an email, SMS, or any other notification method here
     else:
